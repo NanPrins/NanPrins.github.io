@@ -38,6 +38,16 @@
                   this[i] = temp; 
               }
           }
+          
+          function NewBoard () {
+              tiles_flipped = 0;
+              var output = '';
+              memory_array.memory_tile_shuffle();
+              for (var i = 0; i < memory_array.length; i++0 {
+                   output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>'; 
+                   }
+                   document.getElementById('memoryboard').innerHTML = output;
+          }
         </script>
     </head>
    <body> 
