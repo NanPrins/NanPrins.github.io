@@ -1,4 +1,9 @@
 # NanPrins.github.io
-Mijn Website 
-
-eindelijk gelukt :)
+<!Docktype html>
+<html>
+    <head>
+      <style type="text/css">
+      </style>
+    </head>
+  </body>
+</html>
