@@ -20,7 +20,7 @@ text-align: center;
 width: 800px; 
 
 }
-
+/*voor de stopwatch*/
 #stopwatch { 
 display: table-cell; 
 font-size: 11em; 
@@ -121,11 +121,12 @@ function memoryFlipTile(tile,val){
 	}
 }
 
-
+//variabelen voor het opstellen van de stopwatch met de beginwaarden (0)
 var seconde = 0; 
 var minuut = 0; 
 var uur = 0; 
 
+	
 function corrigeerTijd(pWaarde) { 
 	var waarde = pWaarde.toString(); 
 
@@ -133,8 +134,10 @@ function corrigeerTijd(pWaarde) {
 		waarde = "0" + waarde; 
 
 	}
+	//om de waarde terug te geven
 	return waarde; 
 }
+//dit zorgt ervoor dat de seconden en minuten weer op 0 komen te staan na 60 sec/min zodat hij weer overnieuw begint
 function veranderTijd() {
 
 	seconde ++;
@@ -149,10 +152,11 @@ function veranderTijd() {
 		minuut = 0;
 	}
 
-
+// zodat alles wordt gecorigeerd en wordt aangepast 
 	uur = corrigeerTijd(uur);
 	minuut = corrigeerTijd(minuut);
 	seconde = corrigeerTijd(seconde);
+//zo wordt het op het scherm getoont
 	tijd = uur + ":" + minuut + ":" + seconde;
 	document.getElementById("stopwatch").innerHTML = tijd; 
 
